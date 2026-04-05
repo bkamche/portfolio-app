@@ -1,4 +1,4 @@
-name: my first pipeline
+name: My first pipeline
 
 on: push
 
@@ -9,27 +9,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: checkout code
-        uses: actions/checkout@v4
-        - name: docker build -t bkamche/ciportfolio .
-        - name: list images
-        - name: docker images
-        - name: uptime
 
-          run: uptime
+        uses: actions/checkout@v4 
 
-        - name: check no of processors
+      - name: Build image
 
-          run: nproc
+        run: docker build -t bkamche/ciportfolio .
 
-  test:
-    needs: build
+      - name: List images
 
-    runs-on: ubuntu-latest
-
-    steps:
-      
-
-        - name: hello
-
-          run: echo "Hello!"
+        run: docker images
