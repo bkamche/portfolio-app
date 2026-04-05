@@ -9,7 +9,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
+      - name: checkout code
+        uses: actions/checkout@v4
+        - name: docker build -t bkamche/ciportfolio .
+        - name: list images
+        - name: docker images
         - name: uptime
 
           run: uptime
@@ -24,6 +28,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      
 
         - name: hello
 
