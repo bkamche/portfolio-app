@@ -11,7 +11,7 @@ jobs:
       - name: number processor
         run: nproc
         
-test: 
+ test: 
   run-on: ubuntu-latest
   steps:
     - name: echo hello
